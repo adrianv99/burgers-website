@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Burger Land</title>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="flex items-center justify-between flex-wrap bg-red-600 p-4">
+      <!--logo-->
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img class="fill-current h-8 w-8 mr-2" src="https://i.pinimg.com/originals/63/0d/96/630d96bbb40088587c50e1fc7307c10a.png">
+        <span class="font-serif text-2xl tracking-tight">Burger Land</span>
+      </div>
+      <!--sm button-->
+      <div class="block lg:hidden">
+        <button id='btnToggle' class="flex items-center px-3 py-2 border rounded text-teal-200 border-red-300 hover:text-white hover:border-white focus:outline-none">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+        </button>
+      </div>
+      <!--Menu-->
+      <div id='menu' class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
+        <div class="lg:flex-grow lg:ml-5">
+          <a href="index.html" class="block mt-4 mr-4 pb-1 lg:inline-block lg:mt-0 text-white
+          border-b-2 border-red-600 transition easy-in-out duration-500
+          hover:text-white hover:border-b-2 hover:border-white">
+            Home
+          </a>
+          <a href="burgers.html" class="mt-4 mr-4 pb-1 block lg:inline-block lg:mt-0 text-red-300 
+          border-b-2 border-red-600 transition easy-in-out duration-500
+          hover:text-white hover:border-b-2 hover:border-white">
+            Burgers
+          </a>
+        </div>
+        <div class="flex justify-center">
+          <a href="singin.html" class="inline-block text-sm mt-4 mx-1 px-5 py-2 leading-none rounded text-red-300
+          lg:mt-0 transition easy-in duration-500 hover:text-white">Sing in</a>
+          <a href="#" class="inline-block text-sm mt-4 mx-1 px-5 py-2 leading-none border rounded text-white border-white 
+          hover:border-transparent hover:text-red-500 hover:bg-white lg:mt-0 transition easy-in duration-500">Sing up</a>
+        </div>
+      </div>
+  </nav>
+
+    <!-- hero section -->
+    <div class="container my-10 mx-auto px-10 grid grid-cols-1 sm:grid-cols-12 gap-3 text-center sm:text-left">
+        <div class="col-span-6 lg:p-10 lg:mt-10">
+          <h1 class="font-bold text-4xl text-gray-800 my-1">Welcome to <span class="text-red-600">Burger</span> Land!</h1> 
+          <p class="text-xl mb-12">This is the perfect place to order the burger of your dreams.</p>
+          <a class="bg-red-600 text-white mx-1 px-6 py-4 rounded font-bold hover:bg-red-400 
+          transition easy-in-out duration-500" href="#">Order now</a>
+          <a class="text-red-600 mx-1 px-6 py-4 rounded font-bold border border-red-600" href="#">More info</a>
+        </div>
+        <img class="hidden md:inline-block col-span-6" src="/img/home.png">
+    </div>
+
+    <!-- info section -->
+    <div class="mt-32 p-20 bg-red-600 text-white grid grid-cols-1 sm:grid-cols-12 gap-6">
+      <div class="col-span-6 sm:pr-40 mb-5 sm:mb-0">
+        <h2 class="text-4xl font-semibold border-b-4 border-red-100 pb-1 rounded-b">What it's Burger Land?</h2>
+      </div>
+      <div class="col-span-6">
+        <p> 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illum itaque, 
+          architecto id numquam soluta quos. Cupiditate beatae iusto, doloribus nulla, 
+          facere reiciendis quibusdam laborum libero modi velit, dolorem voluptates.
+        </p>
+        <p> 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti illum itaque, 
+          architecto id numquam soluta quos. Cupiditate beatae iusto, doloribus nulla, 
+          facere reiciendis quibusdam laborum libero modi velit, dolorem voluptates.
+        </p>
+      </div>
+    </div>
+
+    <!-- contact section -->
+    <div class="grid grid-cols-12 gap-3">
+      <div class="col-span-12 sm:col-span-4 relative">
+        <img class="w-full sm:w-auto h-full" src="https://images.pexels.com/photos/1633528/pexels-photo-1633528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350&w=940" alt="">
+        <div class="sm:invisible absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <span class="text-white text-4xl font-bold">Made with love</span>
+          <span class="iconify ml-3 text-white text-4xl font-bold" data-icon="mdi:heart" data-inline="false"></span>
+        </div>
+      </div>
+      <div class="col-span-12 sm:col-span-8 sm:mt-10 sm:ml-12">
+        <h2 class="text-4xl font-bold text-gray-800 my-8 px-5 text-center sm:text-left">Get in touch</h2>
+        <form class="max-w-3xl">
+          <div class="flex flex-wrap">
+            <div class="mb-5 w-full sm:w-1/2 px-5">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+                Name
+              </label>
+              <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 
+              leading-tight focus:outline-none focus:bg-white transition easy-in-out duration-500" type="text" placeholder="Jane">
+            </div>
+            <div class="mb-5 w-full sm:w-1/2 px-5">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 " for="grid-first-name">
+                Email
+              </label>
+              <input class="appearance-none block w-full bg-gray-100 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 
+              leading-tight focus:outline-none focus:bg-white transition easy-in-out duration-500" type="email" placeholder="Jane031@gmail.com">
+            </div>
+            <div class="mb-5 w-full px-5">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2 " for="grid-first-name">
+                Message
+              </label>
+              <textarea class="appearance-none block w-full bg-gray-100 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 
+              leading-tight focus:outline-none focus:bg-white resize-none transition easy-in-out duration-500" placeholder="I like all your burgers..." rows="4"></textarea>
+            </div>
+            <div class="mb-5 w-full px-5">
+              <button class="bg-red-600 text-white px-5 py-3 rounded font-bold hover:bg-red-400 w-full sm:w-auto 
+              transition easy-in-out duration-500">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class='w-full text-center p-5 pin-b bg-gray-900 text-gray-600 mt-10 sm:mt-0'>
+      <div class="flex flex-wrap justify-center pb-5 border-b-2 border-gray-600">
+        <span class="iconify mx-8 text-3xl cursor-pointer hover:text-gray-300 transition easy-in-out duration-500" data-icon="mdi:facebook" data-inline="false"></span>
+        <span class="iconify mx-8 text-3xl cursor-pointer hover:text-gray-300 transition easy-in-out duration-500" data-icon="mdi:instagram" data-inline="false"></span>
+        <span class="iconify mx-8 text-3xl cursor-pointer hover:text-gray-300 transition easy-in-out duration-500" data-icon="mdi:twitter" data-inline="false"></span>
+      </div>
+      <p class="pt-5">© Burger Land - 2020</p>
+    </footer>
+      
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
